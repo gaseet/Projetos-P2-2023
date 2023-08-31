@@ -8,8 +8,11 @@ int main() {
 
     while (num != 0) {
         int digito = num % 10;
-        soma += digito;
+        if (digito % 2 == 0){
+            soma += digito;
+        }
         num /= 10;
+        
     }
 
     printf("A soma dos digitos é: %d\n", soma);
