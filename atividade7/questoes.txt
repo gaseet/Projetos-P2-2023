@@ -1,0 +1,26 @@
+1. Declare uma variável do tipo char chamada c e um ponteiro para char chamado pc. Inicialize c com
+o valor 'a' e pc com o endereço de c. Utilizando %p para endereços de memória, imprima as
+seguintes linhas:
+a) O endereço de c e o valor guardado por ele.
+b) O valor que pc armazena e o valor guardado no endereço apontado por ele.
+c) O endereço de pc.
+
+2. Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro, real, e
+char. Associe as variáveis aos ponteiros (use &). Modifique os valores de cada variável usando os
+ponteiros. Imprima os valores das variáveis antes e após a modificação.
+
+3. Escreva um programa que contenha duas variáveis inteiras. Leia essas variáveis do teclado. Em
+seguida, exiba seus endereços de memória.
+
+4. Faça um programa que leia 2 valores inteiros e chame uma função que receba estas 2 variáveis e
+troque o seu conteúdo, ou seja, esta função é chamada passando duas variáveis A e B por exemplo
+e, após a execução da função, A conterá o valor de B e B terá o valor de A.
+
+5. Elaborar um programa que leia dois valores inteiros (A e B). Em seguida, faça uma função que
+retorne a soma do dobro dos dois números lidos. A função deverá armazenar o dobro de A na
+própria variável A e o dobro de B na própria variável B.
+
+6. Crie um programa que contenha uma função que permita passar por parâmetro dois números
+inteiros A e B. A função deverá calcular a soma entre estes dois números e armazenar o resultado
+na variável A. Esta função não deverá possuir retorno, mas deverá modificar o valor do primeiro
+parâmetro. Imprima os valores de A e B na função principal.
