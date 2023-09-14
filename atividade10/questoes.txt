@@ -1,0 +1,14 @@
+1. Faça um programa que receba do usuário um vetor com 10 posições. Em seguida, imprima o maior
+elemento do vetor.
+
+2. Faça um programa que receba do usuário um vetor com 10 posições. Em seguida, imprima o menor
+elemento do vetor.
+
+3. Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Encontre o maior
+elemento do vetor e imprima a posição que ele se encontra.
+
+4. Fazer um programa para ler 5 valores e, em seguida, imprima a posição onde se encontram o maior
+e o menor valor.
+
+5. Faça um programa que leia um vetor de 10 posições e verifique se existem valores iguais e os
+escreva na tela.
