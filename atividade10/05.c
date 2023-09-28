@@ -4,7 +4,7 @@ int encontrarRepetido(int vetor[]){
     int duplica = 0, maior = vetor[0];
 
     for (int i = 0; i < 10; i++) {
-        for (int j = i +1; j < 10; j++) {
+        for (int j = i + 1; j < 10; j++) {
             if (vetor[i] == vetor[j]) {
                 printf("O valor %d está repetido.\n", vetor[i]);
                 duplica = 1;
