@@ -1,54 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-void printMatriz(int linha, int coluna, int matriz[linha][coluna]) {
-    for (int i = 0; i < linha; i++) {
-        for (int j = 0; j < coluna; j++) {
-            printf("%d ", matriz[i][j]);
+int main() {
+    int matriz[5][5];
+    int usado[25] = {0}; // Inicializa o vetor 'usado' com zeros
+    srand(time(NULL));
+
+    // Preenche a matriz
+    for(int i = 0; i < 5; i++) {
+        printf("i: %d\n", i);
+        for(int j = 0; j < 5; j++) {
+            printf("  j: %d\n", j);
+            int numero;
+            do {
+                printf("    Inside do-while\n");
+                numero = rand() % 20 + 1; // Gera um número aleatório de 1 a 20
+            } while (usado[numero - 1]); // Verifica se o número já foi usado
+            printf("    Got a valid number: %d\n", numero);
+            usado[numero - 1] = 1; // Marca o número como usado
+            matriz[i][j] = numero; // Atribui o número à matriz
+        }
+    }
+
+    // Imprime a matriz
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < 5; j++) {
+            printf("%2d ", matriz[i][j]);
         }
         printf("\n");
     }
-}
 
-void matrizElementoMaiorEntre(int linha, int coluna, int matriz1[linha][coluna], 
-    int matriz2[linha][coluna], int matrizResultado[linha][coluna]) {
-
-
-
-    for (int i = 0; i < linha; i++) {
-        for (int j = 0; j < coluna; j++) {
-            if (matriz1[i][j] > matriz2[i][j]) {
-                matrizResultado[i][j] = matriz1[i][j];
-            } else {
-                matrizResultado[i][j] = matriz2[i][j];
-            }
-        }
-    }
-}
-
-int main() {
-
-    int linha = 4;
-    int coluna = 4;
-
-    // Declare matrices with fixed size
-    int matriz1[4][4] = 
-        {
-            {1, 2, 3, 11},
-            {4, 5, 6, 11},
-            {7, 8, 9, 11}
-        };
-
-    int matriz2[4][4] = 
-        {
-            {1, 2, 3, 11},
-            {4, 5, 6, 11},
-            {7, 8, 9, 11}
-        };
-
-    int matrizResultado[4][4];
-
-    matrizElementoMaiorEntre(linha, coluna, matriz1, matriz2, matrizResultado);
-    printMatriz(linha, coluna, matrizResultado);
-    
     return 0;
 }
