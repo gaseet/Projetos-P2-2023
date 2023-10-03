@@ -1,0 +1,94 @@
+1. Leia uma matriz 4 x 4, conte e escreva quantos valores maiores que 10 ela possui.
+
+2. Declare uma matriz 5 x 5. Preencha com 1 a diagonal principal e com 0 os demais elementos.
+Escreva ao final a matriz obtida.
+
+3. Faça um programa que preencha uma matriz com o produto do valor da linha e da coluna de cada
+elemento. Em seguida, imprima na tela a matriz.
+
+4. Leia uma matriz 4 x 4, imprima a matriz e retorne a localização (linha e a coluna) do maior valor.
+
+5. Leia uma matriz 5 x 5. Leia também um valor X. O programa deverá fazer uma busca desse valor na
+matriz e, ao final, escrever a localização (linha e coluna) ou uma mensagem de “não encontrado”.
+
+6. Leia duas matrizes 4 x 4 e escreva uma terceira com os maiores valores de cada posição das
+matrizes lidas.
+
+7. Gere e imprima uma matriz de tamanho 10 x 10, onde seus elementos são da seguinte forma:
+𝐴[𝑖][𝑗] = 2 * 𝑖 + 7 * 𝑗, 𝑠𝑒 (𝑖 < 𝑗);
+𝐴[𝑖][𝑗] = 3 * 𝑖^2, 𝑠𝑒 (𝑖 = 𝑗) ;
+𝐴[𝑖][𝑗] = 5 * 𝑗^2 + 1, 𝑠𝑒 (𝑖 > 𝑗).
+
+8. Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão acima da diagonal
+principal.
+
+9. Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão abaixo da diagonal
+principal.
+
+10. Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão na diagonal principal.
+
+11. Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão na diagonal
+secundária.
+
+12. Leia uma matriz de 3 x 3 elementos. Calcule e imprima a sua transposta.
+
+13. Gere matriz 4 x 4 com valores no intervalo [1, 20]. Escreva um programa que transforme a matriz
+gerada numa matriz triangular inferior, ou seja, atribuindo zero a todos os elementos acima da
+diagonal principal. Imprima a matriz original e a matriz transformada.
+
+14. Faça um programa para gerar automaticamente números entre 0 e 99 de uma cartela de bingo.
+Sabendo que cada cartela deverá conter 5 linhas de 5 números, gere estes dados de modo a não ter
+números repetidos dentro das cartelas. O programa deve exibir na tela a cartela gerada.
+
+15. Leia uma matriz 5 x 10 que se refere às respostas de 10 questões de múltipla escolha, referentes a 5
+alunos. Leia também um vetor de 10 posições contendo o gabarito de respostas que podem ser a,
+b, c ou d. Seu programa deverá comparar as respostas de cada candidato com o gabarito e emitir
+um vetor denominado resultado, contendo a pontuação correspondente a cada aluno.
+
+16. Leia uma matriz 10 x 3 com as notas de 10 alunos em 3 provas. Em seguida, escreva o número de
+alunos cuja pior nota foi na prova 1, o número de alunos cuja pior nota foi na prova 2, e o número
+de alunos cuja pior nota foi na prova 3. Em caso de empate das piores notas de um aluno, o critério
+de desempate é arbitrário, mas o aluno deve ser contabilizado apenas uma vez.
+
+17. Faça um programa que permita ao usuário entrar com uma matriz de 3 x 3 números inteiros. Em
+seguida, gere um array unidimensional pela soma dos números de cada coluna da matriz e mostre
+na tela esse array. Por exemplo, a matriz:
+5 -8 10
+1 2 15
+25 10 7
+Vai gerar um vetor, onde cada posição é a soma das colunas da matriz. A primeira posição será 5 + 1
++ 25, e assim por diante:
+31 4 3
+
+18. Faça um programa que leia uma matriz de 5 linhas e 4 colunas contendo as seguintes informações
+sobre alunos de uma disciplina, sendo todas as informações do tipo inteiro:
+● Primeira coluna: número de matrícula (use um inteiro);
+● Segunda coluna: média das provas;
+● Terceira coluna: média dos trabalhos;
+● Quarta coluna: nota final.
+Elabore um programa que:
+a. Leia as três primeiras informações de cada aluno;
+b. Calcule a nota final como sendo a soma da média das provas e da média dos trabalhos;
+c. Imprima a matrícula do aluno que obteve a maior nota final (assuma que só existe uma
+maior nota);
+d. Imprima a média aritmética das notas finais.
+
+19. Faça um programa que leia uma matriz 3 x 6 com valores reais.
+a. Imprima a soma de todos os elementos das colunas ímpares.
+b. Imprima a média aritmética dos elementos da segunda e quarta colunas.
+c. Substitua os valores da sexta coluna pela soma dos valores das colunas 1 e 2.
+d. Imprima a matriz modificada.
+
+20. Faça um programa que leia duas matrizes 2 x 2 com valores reais. Ofereça ao usuário um menu de
+opções:
+a. Somar as duas matrizes
+b. Subtrair a primeira matriz da segunda
+c. Adicionar uma constante as duas matrizes `
+d. Imprimir as matrizes
+Nas duas primeiras opções uma terceira matriz 3 x 3 deve ser criada. Na terceira opção o valor da
+constante deve ser lido e o resultado da adição da constante deve ser armazenado na própria
+matriz.
+
+21. Faça um programa que leia duas matrizes A e B de tamanho 3 x 3 e calcule C = A ∗ B.
+
+22. Faça um programa que leia uma matriz A de tamanho 3 x 3 e calcule B = A2.
