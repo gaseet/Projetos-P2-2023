@@ -20,6 +20,7 @@ int main(){
         {1,2,3},
         {0,2,3},
         {0,2,3}
+
     };
 
     calcularSomaLinhas(matriz, somaLinhas);

@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void calcularSomaColunas(int matriz[3][3], int somaColunas[3]) {
-    for(int i = 0; i < 3; i++) {
-        for(int j = 0; j < 3; j++) {
+void calcularSomaLinhas(int matriz[3][3], int somaColunas[3]) {
+    for(int j = 0; j < 3; j++) {
+        for(int i = 0; i < 3; i++) {
             somaColunas[j] += matriz[i][j];
         }
     }
@@ -23,7 +23,7 @@ int main(){
 
     };
 
-    calcularSomaColunas(matriz, somaColunas);
+    calcularSomaLinhas(matriz, somaColunas);
 
     printf("Soma das colunas:\n");
     for(int i = 0; i < 3; i++) {
