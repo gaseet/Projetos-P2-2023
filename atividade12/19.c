@@ -1,7 +1,5 @@
 /* 
 19. Faça um programa que leia uma matriz 3 x 6 com valores reais.
-a. Imprima a soma de todos os elementos das colunas ímpares. (SEPARADAMENTE)
-b. Imprima a média aritmética dos elementos da segunda e quarta colunas.
 c. Substitua os valores da sexta coluna pela soma dos valores das colunas 1 e 2.
 d. Imprima a matriz modificada. 
 */
@@ -18,20 +16,48 @@ void printMatriz(int linha, int coluna, int matriz[linha][coluna]) {
 
 void somaColunasImpares(int linha, int coluna, int matriz[linha][coluna]) {
     for (int j = 0; j < coluna; j++) {
+        int alvo1 = 1  - 1;
+        int alvo2 = 2  - 1;
         int soma = 0;
-        for (int i = 0; i < linha; i++) {
-            if (j % 2 == 0){    
-                soma += matriz[i][j];
-            }
+
+        for (int i = 0; i < linha; i++) {  
+            soma += matriz[i][j];
         }
+
         if (j % 2 == 0){    
-                printf("Soma da coluna %d: %d\n", j+1, soma);
+            printf("Soma da coluna %d: %d\n", j+1, soma);
+        }  
+    }
+}
+
+void mediaAritmetica(int linha, int coluna, int matriz[linha][coluna]) {
+    float media = 0;
+    int alvo1 = 2   - 1;
+    int alvo2 = 4   - 1;
+
+   for (int j = 0; j < coluna; j++) {
+        int soma = 0;
+        int media = 0;
+        for (int i = 0; i < linha; i++) {  
+            soma += matriz[i][j];
+        }
+        if (j == alvo1 || j == alvo2){   
+            media = soma / linha;
+            printf("Media da coluna %d: %d\n", j+1, media);
             }  
     }
 }
 
+void substituirColuna(int linha, int coluna, int matriz[linha][coluna]) { 
+
+    for (int i = 0; i < linha; i++) {
+        matriz[i][5] = matriz[i][0] + matriz[i][1];
+    }
+
+}
+
 int main() {
-    int soma = 0;
+
     int linha = 3;
     int coluna = 6;
     int matriz[3][6] = {
@@ -42,7 +68,9 @@ int main() {
 
     };
     somaColunasImpares(linha, coluna, matriz);
-    printf("%d", soma);
+    mediaAritmetica(linha, coluna, matriz);
+    substituirColuna(linha, coluna, matriz);
+    printMatriz(linha, coluna, matriz);
 
-    return 1;
+    return 0;
 }
