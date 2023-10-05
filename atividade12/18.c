@@ -48,13 +48,14 @@ int main(){
 
     //matriz[LINHA][COLUNA]
     int matriz[5][4];
+    
     /*  
         Primeira coluna: número de matrícula;
         Segunda coluna: média das provas;
         Terceira coluna: média dos trabalhos;
         Quarta coluna: nota final.
     */
-    
+
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 3; j++) {
             if (j == 0) {
