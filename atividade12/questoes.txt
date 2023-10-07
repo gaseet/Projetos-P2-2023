@@ -83,9 +83,9 @@ d. Imprima a matriz modificada.
 opções:
 a. Somar as duas matrizes
 b. Subtrair a primeira matriz da segunda
-c. Adicionar uma constante as duas matrizes `
+c. Adicionar uma constante as duas matrizes ???
 d. Imprimir as matrizes
-Nas duas primeiras opções uma terceira matriz 3 x 3 deve ser criada. Na terceira opção o valor da
+Nas duas primeiras opções uma terceira matriz 2 x 2 deve ser criada. Na terceira opção o valor da
 constante deve ser lido e o resultado da adição da constante deve ser armazenado na própria
 matriz.
 
