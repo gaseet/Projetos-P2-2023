@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> // Include this header file for rand()
+#include <stdlib.h>
 
 void printMatriz(int linha, int coluna, int matriz[linha][coluna]) {
     for (int i = 0; i < linha; i++){
