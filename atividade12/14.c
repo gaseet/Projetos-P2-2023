@@ -4,10 +4,9 @@
 
 int main() {
     int matriz[5][5];
-    int usado[25] = {0}; // Inicializa o vetor 'usado' com zeros
+    int usado[25] = {0};
     srand(time(NULL));
 
-    // Preenche a matriz
     for(int i = 0; i < 5; i++) {
         printf("i: %d\n", i);
         for(int j = 0; j < 5; j++) {
@@ -15,15 +14,14 @@ int main() {
             int numero;
             do {
                 printf("    Inside do-while\n");
-                numero = rand() % 99 + 1; // Gera um número aleatório de 1 a 99
-            } while (usado[numero - 1]); // Verifica se o número já foi usado
+                numero = rand() % 99 + 1;
+            } while (usado[numero - 1]);
             printf("    Got a valid number: %d\n", numero);
-            usado[numero - 1] = 1; // Marca o número como usado
-            matriz[i][j] = numero; // Atribui o número à matriz
+            usado[numero - 1] = 1;
+            matriz[i][j] = numero;
         }
     }
 
-    // Imprime a matriz
     for(int i = 0; i < 5; i++) {
         for(int j = 0; j < 5; j++) {
             printf("%2d ", matriz[i][j]);
