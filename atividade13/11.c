@@ -2,22 +2,22 @@
 #include <string.h>
 
 int main() {
-    
-    char nome[30];
-    int i = 0;
+    char str[100];
+    int i, j = 0;
 
-    printf("Informe um nome: ");
-    fgets(nome, sizeof(nome), stdin);
+    printf("Informe a string: ");
+    fgets(str, sizeof(str), stdin);
 
-    while (nome[i]) {
-        if (nome[i] == 'a' || nome[i] == 'e' || nome[i] == 'i'
-         || nome[i] == 'o' || nome[i] == 'u') {
-            nome[i] = '0';
-         }
-        i++;
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] != 'a' && str[i] != 'e' && str[i] != 'i' && str[i] != 'o' && str[i] != 'u' &&
+            str[i] != 'A' && str[i] != 'E' && str[i] != 'I' && str[i] != 'O' && str[i] != 'U') {
+            str[j] = str[i];
+            j++;
+        }
     }
+    str[j] = '\0';
 
-    printf("%s", nome);
+    printf("String sem vogais: %s\n", str);
 
-    return 0
+    return 0;
 }
