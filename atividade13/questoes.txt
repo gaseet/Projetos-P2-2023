@@ -55,6 +55,7 @@ quilômetros cada um deles faz com um litro de combustível. Calcule e mostre:
 a. O modelo de carro mais econômico;
 b. Quantos litros de combustível cada um dos carros cadastrados consomem para percorrer
 uma distância de 1.000 quilômetros.
+
 21. Faça um programa que receba duas frases distintas e imprima de maneira invertida, trocando as
 letras A por *.
 
