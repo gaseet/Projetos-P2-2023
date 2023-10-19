@@ -9,22 +9,18 @@ int main() {
     printf("Informe a frase: ");
     fgets(frase, sizeof(frase), stdin);   
 
-
-
-
-
     for(int i = 0; i < sizeof(frase); i++) {
         if(frase[i] == '\0') {
             cripto[i] = '\0';
         } else if(frase[i] == ' ') {
             cripto[i] = ' ';
         } else {
-            cripto[i] = (frase[i] + 3);
+            cripto[i] = frase[i] + 3;
         }   
     }
 
     printf("Frase informada: %s", frase);
-    printf("Frase criptografada: %s\n", cripto);
+    printf("Frase criptografada: %s", cripto);
 
     return 0;
 }
