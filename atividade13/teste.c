@@ -1,30 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 #include <ctype.h>
 
 int main() {
 
-    char frase[100];
-    char cripto[100];
+    char data[11];
+    int dia, mes, ano;
+    
+    printf("Informe a data no formato \"DDMMAAAA\": ");
+    scanf("%s", data);
 
-    printf("Informe a frase: ");
-    fgets(frase, sizeof(frase), stdin);   
+    int resultado = sscanf(data, "%2d%2d%4d", &dia, &mes, &ano);
 
-
-
-
-
-    for(int i = 0; i < sizeof(frase); i++) {
-        if(frase[i] == '\0') {
-            cripto[i] = '\0';
-        } else if(frase[i] == ' ') {
-            cripto[i] = ' ';
-        } else {
-            cripto[i] = (frase[i] + 3);
-        }   
-    }
-
-    printf("Frase informada: %s", frase);
-    printf("Frase criptografada: %s\n", cripto);
+    printf("Dia: %d, Mês: %d, Ano: %d\n", dia, mes, ano);
 
     return 0;
 }
