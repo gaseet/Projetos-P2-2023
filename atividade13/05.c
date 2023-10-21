@@ -15,9 +15,6 @@ int main() {
         i++;
     }
     
-    // - 1 para remover o caractere de quebra de linha contabilizado quando o usuário
-    // aperta enter.
-    
     printf("%d", tamanho - 1);
 
     return 0;

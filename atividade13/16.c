@@ -9,7 +9,6 @@ int main() {
     scanf("%s", &palavra);
     
     for (int i = 0; palavra[i] != '\0'; i++) {
-        //printf("%d\n", palavra[i]);
         palavra[i] += 32;
     }
 
