@@ -4,7 +4,7 @@
 
     int main() {
         int matriz[5][5];
-        int usado[1] = {0};
+        int usado[99] = {0};
         srand(time(NULL));
 
         for(int i = 0; i < 5; i++) {
