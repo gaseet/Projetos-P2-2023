@@ -21,6 +21,7 @@ int main() {
     printf("\n");
 
     free(numeros);
-
+    numeros = NULL;
+    
     return 0;
 }

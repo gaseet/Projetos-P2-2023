@@ -10,16 +10,22 @@ seguintes informações sobre os produtos no estoque, todas as informações sã
 ● Segunda coluna: quantidade atual no estoque;
 ● Terceira coluna: quantidade mínima desejada em estoque;
 ● Quarta coluna: quantidade máxima permitida em estoque.
+
 Desenvolva um programa que realize as seguintes tarefas:
+
 a. Leia as informações de cada produto: código, quantidade atual, quantidade mínima desejada e
 quantidade máxima permitida em estoque (peso 1,0).
+
 b. Calcule a quantidade a ser reabastecida para cada produto, que é a diferença entre a quantidade
 máxima permitida e a quantidade atual em estoque (peso 1,0).
+
 c. Identifique o produto que precisa de mais reabastecimento, ou seja, aquele com a maior
 quantidade a ser reabastecida (assuma que só existe um produto com a maior necessidade de
 reabastecimento). Imprima o código deste produto e a quantidade a ser reabastecida (peso 1,0).
+
 d. Imprima a média aritmética das quantidades a serem reabastecidas para todos os produtos no
 estoque (peso 1,0).
+
 Este programa ajudará o supermercado a manter um controle eficiente do estoque e a garantir que os
 produtos estejam sempre disponíveis dentro dos limites desejados.
 
@@ -27,17 +33,24 @@ produtos estejam sempre disponíveis dentro dos limites desejados.
 
 Questão 02. Imagine que você está desenvolvendo um aplicativo de mensagens de texto com recursos
 avançados. O aplicativo possui um menu com as seguintes opções:
+
 1. Escrever uma mensagem (até 20 caracteres): O usuário pode digitar uma mensagem curta com até
 20 caracteres (peso 1,0);
+
 2. Concatenar mensagens: O programa permite ao usuário adicionar uma nova mensagem à
 mensagem original e mostra a mensagem resultante (peso 1,0).
+
 3. Inverter a mensagem: O programa inverte a mensagem original, exibindo-a ao contrário (peso 1,0).
+
 4. Substituir caracteres: O usuário informa um caractere existente e um caractere de substituição. O
 programa substitui todas as ocorrências do caractere na mensagem original (peso 1,0).
+
 5. Verificar se é uma substring: O usuário pode inserir uma nova mensagem e o programa verificará
 se ela é uma parte da mensagem original (peso 1,0).
+
 6. Retornar uma substring: O usuário informa a posição inicial e o tamanho desejado, e o programa
 retorna a substring da mensagem original de acordo com essas informações (peso 1,0).
+
 Implemente este menu de opções para que possíveis usuários do aplicativo possam realizar diversas
 operações em suas mensagens, desde escrever uma mensagem de texto até realizar substituições e
 concatenações

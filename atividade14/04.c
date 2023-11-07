@@ -37,6 +37,7 @@ int main() {
   printf("String sem vogais: %s\n", string);
 
   free(string);
-
+  string = NULL;
+  
   return 0;
 }
