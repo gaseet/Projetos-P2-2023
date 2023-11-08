@@ -31,6 +31,6 @@ int main() {
         printf("%d ", vetor[i]);
     }
 
-    free(vetor);  // Libera a memória alocada
+    free(vetor);
     return 0;
 }
