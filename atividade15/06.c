@@ -14,7 +14,7 @@ struct aluno {
 #include <stdio.h>
 #include <string.h>
 
-#define TAMANHO 10
+#define TAMANHO 1
 
 int main() {
 
@@ -26,6 +26,10 @@ int main() {
 
         printf("Informe a matrícula do aluno %d: ", i);
         scanf(" %d", &alunos[i].matricula);
+        getchar();
+
+        printf("Informe o código da disciplina do aluno %d: ", i);
+        scanf(" %d", &alunos[i].codigoDisciplina);
         getchar();
 
         printf("Informe a nota 1 do aluno %d: ", i);
@@ -53,7 +57,8 @@ int main() {
     for(int i = 0; i < TAMANHO; i++) {
         printf("Aluno: %s\n", alunos[i].nome);
         printf("Matrícula: %d\n", alunos[i].matricula);
-        printf("Matrícula: %.2f\n", alunos[i].nota.mediaFinal);
+        printf("Matrícula: %d\n", alunos[i].codigoDisciplina);
+        printf("Média final: %.2f\n", alunos[i].nota.mediaFinal);
         printf("\n");
     }
 
