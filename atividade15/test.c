@@ -1,18 +1,21 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char c[50];
-    printf("c: ");
-    fgets(c, sizeof(c), stdin);
-
-    // Use strtok to find and replace newline character
-    char *newline = strtok(c, "\n");
-    if (newline != NULL) {
-        printf("Modified c: %s\n", c);
-    } else {
-        printf("No newline character found in the string.\n");
+void capitalize_all_words(char *str) {
+  for (int i = 0; i < strlen(str); i++) {
+    if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n') {
+      str[i + 1] = toupper(str[i + 1]);
     }
+  }
+}
 
-    return 0;
+int main() {
+  char str[] = "hello world this is a test";
+
+  capitalize_all_words(str);
+
+  printf("%s\n", str);
+
+  return 0;
 }
