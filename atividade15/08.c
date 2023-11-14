@@ -33,11 +33,10 @@ void inserePessoa(struct Agenda agenda[], int *tamanho, struct Agenda novaPessoa
 #define TAMANHO 5
 
 int main() {
-    struct Agenda agenda[100];
+    struct Agenda agenda[TAMANHO];
     int tamanho = 0;
-    char choice;
 
-    do {
+    for (int cadastro = 0; cadastro < TAMANHO; cadastro++) {
         struct Agenda novaPessoa;
 
         printf("Digite o nome: ");
@@ -53,12 +52,7 @@ int main() {
         novaPessoa.telefone[strcspn(novaPessoa.telefone, "\n")] = '\0';
 
         inserePessoa(agenda, &tamanho, novaPessoa);
-
-        printf("Deseja adicionar outra pessoa? (s/n): ");
-        scanf(" %c", &choice);
-        getchar();
-
-    } while (choice == 's' || choice == 'S');
+    }
 
     printf("---------------------------\n");
     printf("\nAgenda:\n");

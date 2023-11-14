@@ -1,65 +1,45 @@
 #include <stdio.h>
-#include <string.h>
 
-struct consumo {
-    float diario;
-    float total;
-    float relativo;
-};
-
-struct eletrodomestico {
-    char nome[15];
+struct Eletrodomestico {
+    char nome[16];
     float potencia;
-    float horasAtivo;
-    struct consumo consumo;
+    float tempo_ativo;
+    float consumo_individual;
 };
 
-#define TAMANHO 5
+#define TAMANHO 2
 
 int main() {
+    struct Eletrodomestico eletrodomesticos[TAMANHO];
 
-    struct eletrodomestico ele[TAMANHO];
-    int dias;
+    for (int i = 0; i < TAMANHO; ++i) {
+        printf("Digite o nome do eletrodomestico %d: ", i + 1);
+        scanf("%s", eletrodomesticos[i].nome);
 
-    for(int i = 0; i < TAMANHO; i++) {
-        printf("Informe o nome do eletrodoméstico: ");
-        fgets(ele[i].nome, sizeof(ele[i].nome), stdin);
+        printf("Digite a potencia do eletrodomestico %d (em kW): ", i + 1);
+        scanf("%f", &eletrodomesticos[i].potencia);
 
-        printf("Informe a potência em kWh: ");
-        scanf("%f", &ele[i].potencia);
-
-        printf("Informe quantas horas ele passa ativo diariamente: ");
-        scanf("%f", &ele[i].horasAtivo);
+        printf("Digite o tempo ativo por dia do eletrodomestico %d (em horas): ", i + 1);
+        scanf("%f", &eletrodomesticos[i].tempo_ativo);
     }
 
-    //REMOVE '\n' DOS NOMES
-    for(int i = 0; i < TAMANHO; i++) {
-        for(int j = 0; j < strlen(ele[i].nome); j++) {
-            if(ele[i].nome[j] == '\n') {
-                ele[i].nome[j] = '\0';
-            }
-        }
+    float tempo_dias;
+    printf("Digite o tempo em dias: ");
+    scanf("%f", &tempo_dias);
+
+    float consumo_total = 0;
+    for (int i = 0; i < TAMANHO; ++i) {
+        eletrodomesticos[i].consumo_individual = eletrodomesticos[i].potencia * eletrodomesticos[i].tempo_ativo * tempo_dias;
+        consumo_total += eletrodomesticos[i].consumo_individual;
     }
 
-    printf("Informe o tempo em dias: ");
-    scanf("%d", &dias);
-
-    for(int i = 0; i < TAMANHO; i++) {
-        ele[i].consumo.diario = ele[i].horasAtivo * ele[i].potencia;
-    }
-
-    for(int i = 0; i < TAMANHO; i++) {
-        ele[i].consumo.total = dias * ele[i].consumo.diario;
-
-        ele[i].consumo.relativo = (ele[i].consumo.diario / ele[i].consumo.total) * 100;
-    }
-
+    printf("\nConsumo total na casa: %.2f kW\n", consumo_total);
     printf("\n");
-    
-    for(int i = 0; i < TAMANHO; i++) {
-        printf("Consumo total de \"%s\": %.2f kW", ele[i].nome, ele[i].consumo.total);
-        printf("\n");
-        printf("Consumo relativo de \"%s\": %.2f%%", ele[i].nome, ele[i].consumo.relativo);
+
+    for (int i = 0; i < TAMANHO; ++i) {
+        printf("Consumo individual de \"%s\": %.2fkW\n", eletrodomesticos[i].nome, eletrodomesticos[i].consumo_individual);
+        float consumo_relativo = (eletrodomesticos[i].potencia * eletrodomesticos[i].tempo_ativo * tempo_dias / consumo_total) * 100;
+        printf("Consumo relativo de \"%s\": %.2f%%\n", eletrodomesticos[i].nome, consumo_relativo);
         printf("\n");
     }
 
