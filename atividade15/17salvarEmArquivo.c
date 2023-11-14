@@ -254,6 +254,7 @@ int main() {
     struct Agenda agenda[100];
     int tamanho = 0;
     int opcao, opcaoAgenda;
+    int mesBusca, diaBusca;
 
     loadFromFile(agenda, &tamanho, "agendaPROGRAMA.dat");
 
@@ -282,15 +283,14 @@ int main() {
                     break;
                 }
             case 2:
-                int mesBusca;
 
                 printf("Informe o mês do aniversário: ");
                 scanf(" %d", &mesBusca);
 
                 buscaPorMesAniversario(agenda, tamanho, mesBusca);
                 break;
+
             case 3:
-                int diaBusca;
 
                 printf("Informe o mês do aniversário: ");
                 scanf(" %d", &mesBusca);
@@ -299,6 +299,7 @@ int main() {
                 scanf(" %d", &diaBusca);
                 buscaPorDiaMesAniversario(agenda, tamanho, diaBusca, mesBusca);
                 break;
+
             case 4:
                 {
                     struct Agenda novaPessoa;
@@ -385,19 +386,27 @@ int main() {
                     break;
                 }
             case 6:
+
                 opcaoAgenda = 1;
                 imprimeAgenda(agenda, tamanho, opcaoAgenda);
                 break;
+
             case 7:
+
                 opcaoAgenda = 2;
                 imprimeAgenda(agenda, tamanho, opcaoAgenda);
                 break;
+
             case 8:
+            
                 saveToFile(agenda, tamanho, "agendaPROGRAMA.dat");
                 printf("Encerrando o programa. Obrigado!\n");
                 break;
+
             default:
+
                 printf("Opção inválida. Tente novamente.\n");
+            
         }
     } while(opcao != 8);
 
