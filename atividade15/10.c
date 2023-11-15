@@ -73,12 +73,10 @@ int main() {
 
     for (int i = 0; i < 5; ++i) {
         do {
-            //embaralharBaralho(baralho, 52);
             jogador1[i] = baralho[i];
         } while (cartaJaDistribuida(jogador1[i], jogador1, i));
 
         do {
-            //embaralharBaralho(baralho, 52);
             jogador2[i] = baralho[i + 5];
         } while (cartaJaDistribuida(jogador2[i], jogador2, i));
     }
