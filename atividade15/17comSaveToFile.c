@@ -106,7 +106,7 @@ void buscaPorMesAniversario(struct Agenda agenda[], int tamanho, int mesBusca) {
     printf("Pessoas que fazem aniversário no mês %d:\n", mesBusca);
     printf("---------------------------\n");
 
-    int encontrou = 0; // Flag to check if anyone is found
+    int encontrou = 0;
 
     for (int i = 0; i < tamanho; i++) {
         if (agenda[i].nascimento.mes == mesBusca) {
@@ -121,7 +121,7 @@ void buscaPorMesAniversario(struct Agenda agenda[], int tamanho, int mesBusca) {
             printf("Observações: %s\n", agenda[i].observacao);
             printf("---------------------------\n");
             
-            encontrou = 1; // Set flag to true
+            encontrou = 1;
         }
     }
 
