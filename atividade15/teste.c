@@ -2,6 +2,8 @@
 #include <string.h>
 #include <ctype.h>
 
+
+
 struct Endereco {
     char pais[50];
     char estado[50];
@@ -34,74 +36,32 @@ struct Agenda {
 };
 
 void saveToFile(struct Agenda agenda[], int tamanho, const char *filename) {
-    FILE *file = fopen(filename, "w");
+    FILE *file = fopen(filename, "wb");
 
     if (file == NULL) {
         printf("Erro ao abrir o arquivo para escrita.\n");
         return;
     }
 
-    for (int i = 0; i < tamanho; i++) {
-        fprintf(file, "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%d,%s,%d,%d,%d,%s\n",
-                agenda[i].nome,
-                agenda[i].email,
-                agenda[i].endereco.pais,
-                agenda[i].endereco.estado,
-                agenda[i].endereco.cidade,
-                agenda[i].endereco.bairro,
-                agenda[i].endereco.rua,
-                agenda[i].endereco.numero,
-                agenda[i].endereco.complemento,
-                agenda[i].endereco.cep,
-                agenda[i].telefone.ddd,
-                agenda[i].telefone.numero,
-                agenda[i].nascimento.dia,
-                agenda[i].nascimento.mes,
-                agenda[i].nascimento.ano,
-                agenda[i].observacao);
-    }
+    fwrite(&tamanho, sizeof(int), 1, file);
+    fwrite(agenda, sizeof(struct Agenda), tamanho, file);
 
     fclose(file);
 }
 
 void loadFromFile(struct Agenda agenda[], int *tamanho, const char *filename) {
-    FILE *file = fopen(filename, "r");
+    FILE *file = fopen(filename, "rb");
 
     if (file == NULL) {
-        printf("Erro ao abrir o arquivo para leitura.\n");
+        printf("Arquivo de agenda não encontrado. Criando um novo.\n");
         return;
     }
 
-    *tamanho = 0;
-
-    char linha[1024];
-
-    while (fgets(linha, sizeof(linha), file) != NULL) {
-        if (sscanf(linha, "%99[^,],%99[^,],%99[^,],%99[^,],%99[^,],%99[^,],%99[^,],%99[^,],%99[^,],%99[^,],%d,%99[^,],%d,%d,%d,%99[^\n]",
-                   agenda[*tamanho].nome,
-                   agenda[*tamanho].email,
-                   agenda[*tamanho].endereco.pais,
-                   agenda[*tamanho].endereco.estado,
-                   agenda[*tamanho].endereco.cidade,
-                   agenda[*tamanho].endereco.bairro,
-                   agenda[*tamanho].endereco.rua,
-                   agenda[*tamanho].endereco.numero,
-                   agenda[*tamanho].endereco.complemento,
-                   agenda[*tamanho].endereco.cep,
-                   &agenda[*tamanho].telefone.ddd,
-                   agenda[*tamanho].telefone.numero,
-                   &agenda[*tamanho].nascimento.dia,
-                   &agenda[*tamanho].nascimento.mes,
-                   &agenda[*tamanho].nascimento.ano,
-                   agenda[*tamanho].observacao) == 16) {
-
-            (*tamanho)++;
-        }
-    }
+    fread(tamanho, sizeof(int), 1, file);
+    fread(agenda, sizeof(struct Agenda), *tamanho, file);
 
     fclose(file);
 }
-
 
 void buscaPorNome(struct Agenda agenda[], int tamanho, char nomeBusca[100]) {
     for (int i = 0; nomeBusca[i]; i++) {
@@ -296,7 +256,7 @@ int main() {
     int opcao, opcaoAgenda;
     int mesBusca, diaBusca;
 
-    loadFromFile(agenda, &tamanho, "agendaPROGRAMA.txt");
+    loadFromFile(agenda, &tamanho, "agendaPROGRAMAteste.txt");
 
     do {
 
@@ -439,7 +399,7 @@ int main() {
 
             case 8:
             
-                saveToFile(agenda, tamanho, "agendaPROGRAMA.txt");
+                saveToFile(agenda, tamanho, "agendaPROGRAMAteste.txt");
                 printf("Encerrando o programa. Obrigado!\n");
                 break;
 
