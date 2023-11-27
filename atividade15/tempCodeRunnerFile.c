@@ -1,1 +1,1 @@
-cartaJa
+scanf
