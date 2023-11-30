@@ -416,7 +416,7 @@ void editarPessoa(struct Agenda agenda[], int tamanho, int idBusca) {
                     break;
 
                 case 11:
-                    printf("Digite o novo DDD: ");
+                    printf("Digite o novo DDD (int): ");
                     scanf("%d", &agenda[i].telefone.ddd);
                     getchar();
                     break;
@@ -428,19 +428,19 @@ void editarPessoa(struct Agenda agenda[], int tamanho, int idBusca) {
                     break;
 
                 case 13:
-                    printf("Digite o novo dia de nascimento: ");
+                    printf("Digite o novo dia de nascimento (int): ");
                     scanf("%d", &agenda[i].nascimento.dia);
                     getchar();
                     break;
 
                 case 14:
-                    printf("Digite o novo mês de nascimento: ");
+                    printf("Digite o novo mês de nascimento (int): ");
                     scanf("%d", &agenda[i].nascimento.mes);
                     getchar();
                     break;
 
                 case 15:
-                    printf("Digite o novo ano de nascimento: ");
+                    printf("Digite o novo ano de nascimento (int): ");
                     scanf("%d", &agenda[i].nascimento.ano);
                     getchar();
                     break;
@@ -469,10 +469,11 @@ void editarPessoa(struct Agenda agenda[], int tamanho, int idBusca) {
 }
 
 int main() {
-    struct Agenda agenda[100];
+    struct Agenda agenda[1000];
     int tamanho = 0;
     int opcao, opcaoAgenda;
     int mesBusca, diaBusca;
+    int idEdicao;
 
     loadFromFile(agenda, &tamanho, "teste.txt");
 
@@ -488,10 +489,10 @@ int main() {
         }
     }
 
-    //printf("%d\n", idAtual);
+    
 
     do {
-
+        //printf("%d\n", idAtual);
         printf("1. Busca por primeiro nome\n");
         printf("2. Busca por mês de aniversário\n");
         printf("3. Busca por dia e mês de aniversário\n");
@@ -595,7 +596,7 @@ int main() {
                     fgets(novaPessoa.endereco.cep, sizeof(novaPessoa.endereco.cep), stdin);
                     novaPessoa.endereco.cep[strcspn(novaPessoa.endereco.cep, "\n")] = '\0';
 
-                    printf("Digite o DDD: ");
+                    printf("Digite o DDD (int): ");
                     scanf("%d", &novaPessoa.telefone.ddd);
                     getchar();
 
@@ -603,15 +604,15 @@ int main() {
                     fgets(novaPessoa.telefone.numero, sizeof(novaPessoa.telefone.numero), stdin);
                     novaPessoa.telefone.numero[strcspn(novaPessoa.telefone.numero, "\n")] = '\0';
 
-                    printf("Digite o dia de nascimento: ");
+                    printf("Digite o dia de nascimento (int): ");
                     scanf("%d", &novaPessoa.nascimento.dia);
                     getchar();
 
-                    printf("Digite o mês de nascimento: ");
+                    printf("Digite o mês de nascimento (int): ");
                     scanf("%d", &novaPessoa.nascimento.mes);
                     getchar();
 
-                    printf("Digite o ano de nascimento: ");
+                    printf("Digite o ano de nascimento (int): ");
                     scanf("%d", &novaPessoa.nascimento.ano);
                     getchar();
 
@@ -657,7 +658,7 @@ int main() {
 
             case 9:
 
-                int idEdicao;
+                idEdicao = 0;
                 printf("Digite o ID da pessoa a ser editada: ");
                 scanf("%d", &idEdicao);
                 getchar();
