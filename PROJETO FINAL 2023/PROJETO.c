@@ -38,7 +38,7 @@ void saveToFile(struct Agenda agenda[], int tamanho, const char *filename) {
     FILE *file = fopen(filename, "w");
 
     if (file == NULL) {
-        printf("Erro ao abrir o arquivo para escrita.\n");
+        printf("Erro ao abrir o arquivo para escrita. Criando um novo.\n");
         return;
     }
 
@@ -140,6 +140,10 @@ void buscaPorNome(struct Agenda agenda[], int tamanho, char nomeBusca[100]) {
 }
 
 void buscaPorMesAniversario(struct Agenda agenda[], int tamanho, int mesBusca) {
+    if (mesBusca < 1 || mesBusca > 12) {
+        printf("Mês inválido. O mês deve estar entre 1 e 12.\n");
+        return;
+    }
 
     printf("---------------------------\n");
     printf("Pessoas que fazem aniversário no mês %d:\n", mesBusca);
@@ -172,6 +176,7 @@ void buscaPorMesAniversario(struct Agenda agenda[], int tamanho, int mesBusca) {
 }
 
 void buscaPorDiaMesAniversario(struct Agenda agenda[], int tamanho, int diaBusca, int mesBusca) {
+    int diasPorMes[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     printf("---------------------------\n");
     printf("Pessoas que fazem aniversário em %d/%d:\n", diaBusca, mesBusca);
@@ -464,7 +469,7 @@ void editarPessoa(struct Agenda agenda[], int tamanho, int idBusca) {
 }
 
 int main() {
-    struct Agenda agenda[1000];
+    struct Agenda agenda[100];
     int tamanho = 0;
     int opcao, opcaoAgenda;
     int mesBusca, diaBusca;

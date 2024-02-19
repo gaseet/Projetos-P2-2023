@@ -1,6 +1,2 @@
-6,9999,teste,teste,teste,teste,teste,teste,teste,teste,teste,41,teste,31,12,2003,teste
-1,333,teste,teste,teste,teste,teste,teste,teste,teste,teste,89,teste,12,11,1989,teste
-5,1234,teste,teste,teste,teste,teste,teste,teste,teste,teste,33,teste,31,12,2003,teste
-4,JOAQUIM,teste@,teste,teste,teste,teste,teste,teste teste,teste,teste,73,testes,31,12,3002,teset
-2,JOAO,joao@,Brasil,Sao Paulo,Sao Paulo,teste,teste,teste teste,teste,teste,17,teste,1,1,1,teste
-3,ZZZZZ,teste,teste,teste,teste,teste,teste,teste,teste,teste,43,teste,12,12,1999,teste
+1,JULIA,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+2,JOSE,augusto@gmail.com,1,1,1,1,1,1,1,1,1,1,1,1,1,1
